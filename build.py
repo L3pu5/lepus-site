@@ -6,16 +6,16 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 
 
-OUT_FOLDER = "./out"
+docs_FOLDER = "./docs"
 BASE = "./static/base.html"
 
 
 
 def build():
-    # Remove the out
-    shutil.rmtree("./out")
-    # Copy the static to the out file
-    shutil.copytree("./static/css", "./out/css", dirs_exist_ok=True)
+    # Remove the docs
+    shutil.rmtree("./docs")
+    # Copy the static to the docs file
+    shutil.copytree("./static/css", "./docs/css", dirs_exist_ok=True)
     
     # Glob all htmls
     env = jinja2.Environment(loader=jinja2.FileSystemLoader("./static"))
@@ -31,10 +31,10 @@ def build():
         soup = BeautifulSoup(raw, "html.parser")
         pretty_html = soup.prettify()
 
-        outPath = Path(f"./out/{f}")
-        outPath.parent.mkdir(exist_ok=True, parents=True)
-        with outPath.open("w") as fOut:
-            fOut.write(pretty_html)
+        docsPath = Path(f"./docs/{f}")
+        docsPath.parent.mkdir(exist_ok=True, parents=True)
+        with docsPath.open("w") as fdocs:
+            fdocs.write(pretty_html)
 
 
 
