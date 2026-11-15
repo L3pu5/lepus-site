@@ -1,0 +1,35 @@
+hero {
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right:auto;
+    flex-direction: column;
+};
+
+top-header {
+    text-align: center;
+}
+
+.t-center {
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+}
+
+code {
+    background-color: #D1F1D1;
+}
+
+.block {
+    display:block;
+}
+
+.margin {
+    margin: 15px;
+}
+
+.pad {
+    padding: 15px;
+}
