@@ -4,12 +4,11 @@ import glob
 import shutil
 from bs4 import BeautifulSoup
 from pathlib import Path
+import datetime
 
 
 docs_FOLDER = "./docs"
 BASE = "./static/base.html"
-
-
 
 def build():
     # Remove the docs
@@ -19,7 +18,13 @@ def build():
     
     # Glob all htmls
     env = jinja2.Environment(loader=jinja2.FileSystemLoader("./static"))
+
     srcFiles = glob.glob("**/*.html", recursive=True, root_dir="./static")
+
+    envVars = {
+        "dateTime": datetime.datetime.now().strftime("%A, %d %b %Y | %H:%M:%S")
+    }
+
     for f in srcFiles:
         if f.count("base.html") > 0:
             continue
@@ -27,7 +32,7 @@ def build():
         f = f.removeprefix("./static")
 
         t = env.get_template(f)
-        raw = t.render()
+        raw = t.render(envVars)
         soup = BeautifulSoup(raw, "html.parser")
         pretty_html = soup.prettify()
 

@@ -7,7 +7,18 @@
 </head>
 <body>
     <hero>
-        {% block content %}
-        {% endblock %}
-    </hero>
+            <banner class="t-center danger pad-y">
+                <strong>
+                    SITE UNDER CONSTRUCTION
+                </strong><br>
+                Statically rendered on {{ dateTime }}
+            </banner>
+            <banner class="t-center lavender pad-y" style="border-bottom: 1px solid black;">
+                <pre><a href="/">Home</a> | <a href="/goals">Goals</a> | <a href="/blog">Blog</a></pre> 
+            </banner>
+            <content>
+                {% block content %}
+                {% endblock %}
+            </content>
+        </hero>
 </body>

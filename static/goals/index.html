@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<top-header style="text-align: center;">
+    <h1>
+        Goals
+    </h1>
+</top-header>
+<flex-row>
+    <flex-col class="col-2">
+        <p>
+            My overall goals are:
+            <ul>
+                <li>Better understand computer.</li>
+                <li>Continue learning.</li>
+                <li>Start learning rev and pwn CTF challenges.</li>
+            </ul>
+        </p>
+    </flex-col>
+    <flex-col class="col-2">
+        <caption class="t-center">Goals by Year</caption>
+        <table style="width: 95%;">
+            <thead>
+                <tr>
+                    <th>
+                        Year
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="t-center">
+                        <a href="/goals/2026">2026</a>
+                        
+                    </td>
+                    <td>
+                        Work in progress
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </flex-col>
+</flex-row>
+
+{% endblock %}

@@ -1,13 +1,68 @@
 hero {
     display: flex;
-    width: 60%;
-    margin-left: auto;
-    margin-right:auto;
+    width: 100%;
+    min-height: 100vh;
     flex-direction: column;
-};
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+banner {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+}
+
+content {
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #C9E4DE;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px 10px;
+}
+
+body {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    min-width: 80vw;
+    width: 80vw;
+    margin: 0px;
+    min-height: 100vh;
+    padding-top: 0px;
+    margin-top: 0px;
+}
 
 top-header {
     text-align: center;
+}
+
+flex-row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 2px solid black;
+}
+
+.col-2 {
+    width: 47.5%;
+    flex-grow: 1;
 }
 
 .t-center {
@@ -19,7 +74,23 @@ figcaption {
 }
 
 code {
-    background-color: #D1F1D1;
+    background-color: #C9E4DE;
+}
+
+.accent {
+    background-color: #C9E4DE;
+}
+
+.warning {
+    background-color: #FAEDCB;
+}
+
+.danger {
+    background-color: #F2C6DE;
+}
+
+.lavender {
+    background-color: #DBCDF0;
 }
 
 .block {
@@ -32,4 +103,9 @@ code {
 
 .pad {
     padding: 15px;
+}
+
+.pad-y {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
