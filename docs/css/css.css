@@ -77,6 +77,12 @@ code {
     background-color: #C9E4DE;
 }
 
+pre {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    overflow-x: scroll;
+}
+
 .accent {
     background-color: #C9E4DE;
 }

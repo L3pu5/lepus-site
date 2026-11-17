@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+ <title>
+  Lepus' Warren
+ </title>
+ <link href="/css/css.css" rel="stylesheet"/>
+</head>
+<body>
+ <hero>
+  <banner class="t-center danger pad-y">
+   <strong>
+    SITE UNDER CONSTRUCTION
+   </strong>
+   <br/>
+   Statically rendered on Tuesday, 17 Nov 2026 | 12:54:59
+  </banner>
+  <banner class="t-center lavender pad-y" style="border-bottom: 1px solid black;">
+   <pre><a href="/">Home</a> | <a href="/goals">Goals</a> | <a href="/matter">Matter</a> | <a href="/blog">Blog</a></pre>
+  </banner>
+  <content>
+   <top-header style="text-align: center;">
+    <h1>
+     python-recipies
+    </h1>
+   </top-header>
+   <flex-row>
+    <flex-col class="col-2">
+     <item>
+      <h3>
+       Byte hexstrings to ascii
+      </h3>
+      <code class="block pad margin">
+       <pre class="block">
+        value = hexBytes.strip().decode().zfill(16)
+        value = bytes.fromhex(value) 
+        # If this is from the stack we will want to reorder the bytes [::-1]
+        # That is: value = bytes.fromhex(value)[::-1]</pre>
+      </code>
+     </item>
+    </flex-col>
+    <flex-col class="col-2">
+     <item>
+      <h3>
+       pwntools as dbg
+      </h3>
+      <p>
+       <ol>
+        <li>
+         Install pwndbg.
+        </li>
+        <li>
+         Create
+         <code>
+          ~/.gdbinit
+         </code>
+         .
+        </li>
+        <li>
+         Insert
+         <code>
+          source ~/pwndbg/dbginit.py
+         </code>
+         .
+        </li>
+       </ol>
+      </p>
+     </item>
+     <item>
+      <h3>
+       gdbscript
+      </h3>
+      <code class="block pad margin">
+       <pre class="block">
+        from pwn import *
+
+        script = """
+        b *(challenge+0x0e1) # Breakpoint
+        continue # Start the program
+        """
+
+        e = ELF("./binary")
+        g = gdb.debug("./binary", gdbscript=script)</pre>
+      </code>
+     </item>
+    </flex-col>
+   </flex-row>
+  </content>
+ </hero>
+</body>
